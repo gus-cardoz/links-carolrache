@@ -4,7 +4,7 @@ const blocks = [
     body: (
       <>
         Melhore sua vida pessoal{' '}<br className="md:hidden" />
-        e profissional<span className="hidden md:inline"><br /></span>{' '}aumentando sua segurança e<span className="hidden md:inline"><br /></span> inteligência emocional.
+        e profissional<span className="hidden md:inline"><br /></span>{' '}aumentando{' '}<br className="md:hidden" />sua segurança e{' '}<br className="md:hidden" /><span className="hidden md:inline"><br /></span>inteligência emocional.
       </>
     ),
     image: '/assets/ft%20links%201.png',
@@ -57,7 +57,7 @@ const blocks = [
 
 function App() {
   return (
-    <div className="relative min-h-screen w-full bg-[#FCFCF2] text-brand-dark">
+    <div className="relative min-h-screen w-full bg-[#FCFCF2] md:bg-[url('/assets/bg1%20links%20desktop.png')] md:bg-cover md:bg-center md:bg-fixed text-brand-dark">
       <div className="relative z-10 max-w-[1140px] mx-auto px-5 py-10 md:py-16">
         <div className="max-w-[360px] md:max-w-[640px] mx-auto">
           <header className="text-center mb-6 md:mb-10">
@@ -83,7 +83,7 @@ function App() {
                   className="absolute inset-0 bg-cover bg-center hidden md:block"
                   style={{ backgroundImage: `url(${b.imageDesktop})` }}
                 />
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,1)_0%,rgba(0,0,0,0.7)_30%,rgba(0,0,0,0)_65%)]" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_50%,rgba(0,0,0,0)_100%)] md:bg-[linear-gradient(to_right,rgba(0,0,0,1)_0%,rgba(0,0,0,0.7)_30%,rgba(0,0,0,0)_65%)]" />
                 <div className="relative h-full flex flex-col justify-center items-start text-left p-6 md:p-8 md:min-h-[120px]">
                   <h2 className="font-sans font-medium text-[22px] md:text-[36px] leading-[1.1] text-[#FCFCF2]">
                     {b.title}
