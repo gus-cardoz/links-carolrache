@@ -14,14 +14,14 @@ const blocks = [
   {
     title: (
       <>
-        Seja formada<span className="hidden md:inline"><br /></span> pessoalmente{' '}<br />
+        Seja formada{' '}<br /> pessoalmente{' '}<span className="hidden md:inline"><br /></span>
         por mim
       </>
     ),
     body: (
       <>
         Para aplicar profissionalmente<span className="hidden md:inline"><br /></span> meu método de Inteligência Emocional.{' '}
-        <span className="hidden md:inline"><br /></span><span className="text-[12px] md:text-[16px]">(para líderes, terapeutas e profissionais liberais)</span>
+        <span className="hidden md:inline"><br /></span><span className="text-[10px] md:text-[16px]">(para líderes, terapeutas e profissionais liberais)</span>
       </>
     ),
     image: '/assets/ft%20links%202.webp',
@@ -68,12 +68,12 @@ function App() {
             />
           </header>
 
-          <div className="flex flex-col items-center gap-4 md:gap-5">
+          <div className="flex flex-col items-center gap-3 md:gap-5">
             {blocks.map((b, i) => (
               <a
                 key={i}
                 href={b.href}
-                className="group relative block w-[320px] h-[230px] md:w-full md:h-[380px] overflow-hidden rounded-xl transition-transform duration-200 hover:-translate-y-0.5"
+                className="group relative block w-[320px] h-[125px] md:w-full md:h-[380px] overflow-hidden rounded-lg md:rounded-xl transition-transform duration-200 hover:-translate-y-0.5"
               >
                 <div
                   className="absolute inset-0 bg-cover bg-center md:hidden"
@@ -85,11 +85,11 @@ function App() {
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_50%,rgba(0,0,0,0)_100%)] md:bg-[linear-gradient(to_right,rgba(0,0,0,1)_0%,rgba(0,0,0,0.7)_30%,rgba(0,0,0,0)_65%)]" />
                 <div className="relative h-full flex flex-col justify-center items-start text-left p-6 md:p-8 md:min-h-[120px]">
-                  <h2 className="font-sans font-medium text-[22px] md:text-[36px] leading-[1.1] text-[#FCFCF2]">
+                  <h2 className="font-sans font-medium text-[18px] md:text-[36px] leading-[1.1] text-[#FCFCF2]">
                     {b.title}
                   </h2>
                   {b.body && (
-                    <p className="mt-2 font-sans text-[14px] md:text-[18px] font-normal leading-[1.4] text-[#FCFCF2]/75">
+                    <p className="mt-2 font-sans text-[11px] md:text-[18px] font-normal leading-[1.4] text-[#FCFCF2]/75">
                       {b.body}
                     </p>
                   )}
