@@ -7,8 +7,8 @@ const blocks = [
         e profissional<span className="hidden md:inline"><br /></span>{' '}aumentando{' '}<br className="md:hidden" />sua segurança e{' '}<br className="md:hidden" /><span className="hidden md:inline"><br /></span>inteligência emocional.
       </>
     ),
-    image: '/assets/ft%20links%201.png',
-    imageDesktop: '/assets/ft%20links%201%20desktop.png',
+    image: '/assets/ft%20links%201.webp',
+    imageDesktop: '/assets/ft%20links%201%20desktop.webp',
     href: '#',
   },
   {
@@ -24,8 +24,8 @@ const blocks = [
         <span className="hidden md:inline"><br /></span><span className="text-[12px] md:text-[16px]">(para líderes, terapeutas e profissionais liberais)</span>
       </>
     ),
-    image: '/assets/ft%20links%202.png',
-    imageDesktop: '/assets/ft%20links%202%20desktop.png',
+    image: '/assets/ft%20links%202.webp',
+    imageDesktop: '/assets/ft%20links%202%20desktop.webp',
     href: '#',
   },
   {
@@ -36,8 +36,8 @@ const blocks = [
       </>
     ),
     body: '',
-    image: '/assets/ft%20links%203.png',
-    imageDesktop: '/assets/ft%20links%203%20desktop.png',
+    image: '/assets/ft%20links%203.webp',
+    imageDesktop: '/assets/ft%20links%203%20desktop.webp',
     href: '#',
   },
   {
@@ -49,8 +49,8 @@ const blocks = [
       </>
     ),
     body: '',
-    image: '/assets/ft%20links%204.png',
-    imageDesktop: '/assets/ft%20links%204%20desktop.png',
+    image: '/assets/ft%20links%204.webp',
+    imageDesktop: '/assets/ft%20links%204%20desktop.webp',
     href: '#',
   },
 ]
