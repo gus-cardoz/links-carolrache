@@ -9,7 +9,7 @@ const blocks = [
     ),
     image: '/assets/ft%20links%201.webp',
     imageDesktop: '/assets/ft%20links%201%20desktop.webp',
-    href: '#',
+    href: 'https://acendasualuz.com.br/',
   },
   {
     title: (
@@ -26,7 +26,7 @@ const blocks = [
     ),
     image: '/assets/ft%20links%202.webp',
     imageDesktop: '/assets/ft%20links%202%20desktop.webp',
-    href: '#',
+    href: 'https://fi.carolrache.com.br/listaespera',
   },
   {
     title: (
@@ -38,7 +38,7 @@ const blocks = [
     body: '',
     image: '/assets/ft%20links%203.webp',
     imageDesktop: '/assets/ft%20links%203%20desktop.webp',
-    href: '#',
+    href: 'https://namah.vc/palestra',
   },
   {
     title: (
@@ -51,7 +51,7 @@ const blocks = [
     body: '',
     image: '/assets/ft%20links%204.webp',
     imageDesktop: '/assets/ft%20links%204%20desktop.webp',
-    href: '#',
+    href: 'https://namah.vc/Publicidades',
   },
 ]
 
