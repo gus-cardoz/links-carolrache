@@ -101,7 +101,7 @@ function App() {
         </div>
       </div>
       <hr className="mt-10 border-t border-brand-dark/20" />
-      <footer className="py-6 text-center text-sm opacity-70">
+      <footer className="py-6 text-center text-sm text-black">
         Copyright © 2026 Carol Rache<br />
         Todos os Direitos Reservados
       </footer>
