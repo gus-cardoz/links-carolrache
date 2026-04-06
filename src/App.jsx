@@ -14,7 +14,7 @@ const blocks = [
   {
     title: (
       <>
-        Seja formada<span className="hidden md:inline"><br /></span> pessoalmente{' '}<br className="md:hidden" />
+        Seja formada<span className="hidden md:inline"><br /></span> pessoalmente{' '}<br />
         por mim
       </>
     ),
