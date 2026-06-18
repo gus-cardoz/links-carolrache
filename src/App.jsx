@@ -9,7 +9,7 @@ const blocks = [
     ),
     image: '/assets/ft%20links%201.webp',
     imageDesktop: '/assets/ft%20links%201%20desktop.webp',
-    href: 'https://acendasualuz.com.br/',
+    href: 'https://acenda.carolrache.com.br/lista-de-espera?utm_source=instagram&utm_medium=bio&utm_campaign=lista-espera&utm_content=bio-carol',
   },
   {
     title: (
