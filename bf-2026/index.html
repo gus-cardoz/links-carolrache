@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<link rel="icon" type="image/svg+xml" href="/assets/favicon%20links.svg" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KCDVNZMG');</script>
+<!-- End Google Tag Manager -->
+
+<title>A listinha de Black Friday da Carol</title>
+<meta name="robots" content="noindex, nofollow" />
+<meta name="description" content="Só o que eu realmente uso, amo e indico. Sem caça a ofertas inúteis." />
+<meta property="og:title" content="A listinha de Black Friday da Carol" />
+<meta property="og:description" content="Só o que eu realmente uso, amo e indico. Sem caça a ofertas inúteis." />
+<meta property="og:image" content="/assets/bf/heroi-op6.webp" />
+<link rel="preload" as="image" href="/assets/bf/heroi-op6-m.webp" media="(max-width:860px)" fetchpriority="high" />
+<link rel="preload" as="image" href="/assets/bf/heroi-op6.webp" media="(min-width:861px)" fetchpriority="high" />
+<link rel="preload" href="/fonts/bf/quincy-300.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/bf/quincy-300i.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/bf/gotham-700.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/bf/gotham-400.woff2" as="font" type="font/woff2" crossorigin />
+
+<!--
+  Listinha de Black Friday da Carol (copy: "Página com links.pdf", 25/11).
+  Skill paginas-animadas, direção de arte das referências de e-commerce de
+  bem-estar (moldura clara, foto grande com cartões flutuando, serifa grande,
+  cupom em forma de tíquete, blocos tingidos por produto).
+  Efeitos: entrada desfocada (1), entrada do topo (6),
+  cartões flutuando (37), texto que se pinta (11),
+  tíquete com brilho e canhoto que rasga ao copiar, botão que se enche a partir do
+  ícone (10b).
+  Fotos: banco da Carol (2025 e 2026), em public/assets/bf/.
+  PENDENTE: links dos 5 produtos (PRODUTOS, no script) e confirmar o Instagram.
+-->
+<style>
+@font-face{font-family:'Gotham';src:url('/fonts/bf/gotham-400.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Gotham';src:url('/fonts/bf/gotham-500.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Gotham';src:url('/fonts/bf/gotham-700.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Quincy';src:url('/fonts/bf/quincy-300.woff2') format('woff2');font-weight:300;font-display:swap}
+@font-face{font-family:'Quincy';src:url('/fonts/bf/quincy-300i.woff2') format('woff2');font-weight:300;font-style:italic;font-display:swap}
+
+:root{
+  --fundo:#E6E1D7;--moldura:#FCFCF2;--areia:#F2EDE1;--branco:#FFFFFE;
+  --ink:#0A0A0A;--ink2:#4A4740;--ink3:rgba(10,10,10,.45);--linha:rgba(10,10,10,.1);
+  --ouro:#D8BA67;--ouro-escuro:#90660E;
+  --conteudo:max(54.17vw,720px); /* 1040px numa tela de 1920, proporcional nas outras */
+  --margem:max(24px,calc((100vw - var(--conteudo)) / 2));
+  --e:cubic-bezier(.22,.61,.36,1);--enche:cubic-bezier(.65,0,.25,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:clip}
+html{scroll-behavior:smooth}
+body{background:var(--moldura);color:var(--ink);font:400 16px/1.55 'Gotham',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+svg{display:block;flex:none}
+.serif{font-family:'Quincy',Georgia,serif;font-weight:300}
+.it{font-style:italic}
+.so-m{display:none}
+@media(max-width:860px){.so-d{display:none}.so-m{display:inline}}
+.nw{white-space:nowrap}
+.rot{font-size:14px;color:var(--ink2)}
+
+/* moldura clara em volta de tudo (como nas referências) */
+.moldura{background:var(--moldura)}
+.moldura>footer{width:min(900px,100% - 48px);margin-left:auto;margin-right:auto}
+.moldura>section{width:min(var(--conteudo),100% - 48px);margin-left:auto;margin-right:auto}
+
+/* 1 entrada desfocada */
+.rv{opacity:0;transform:translateY(40px) scale(.985);filter:blur(8px);transition:opacity .9s var(--e) var(--d,0s),transform 1s var(--e) var(--d,0s),filter .9s var(--e) var(--d,0s)}
+.rv.in{opacity:1;transform:none;filter:none}
+
+/* 10b pílula que se enche a partir do ícone */
+.pilula{position:relative;isolation:isolate;display:inline-flex;align-items:center;gap:14px;height:56px;padding:0 6px 0 24px;border-radius:12px;background:var(--ink);color:var(--moldura);font:700 15px/1.1 'Gotham',sans-serif;cursor:pointer;border:0;overflow:hidden;transition:transform .45s var(--e),box-shadow .45s var(--e)}
+.pilula .bola{flex:none;position:relative;width:44px;height:44px;border-radius:9px;display:grid;place-items:center;color:var(--ink);margin-left:auto}
+.pilula .bola::before{content:"";position:absolute;inset:0;border-radius:9px;background:var(--ouro);z-index:-1;transition:transform .65s var(--enche)}
+.pilula:hover{transform:translateY(-2px);box-shadow:0 20px 40px -18px rgba(10,10,10,.55)}
+.pilula:hover .bola::before{transform:scale(30)}
+.pilula .tx{position:relative;transition:color .45s}
+.pilula:hover .tx{color:var(--ink)}
+.pilula .bola svg{transition:transform .45s var(--e)}
+.pilula:hover .bola svg{transform:translateX(3px)}
+.pilula.clara{background:var(--branco);color:var(--ink)}
+
+/* botão dos produtos: gradiente dourado do Acenda, maior que o cupom */
+.pilula.ouro{width:100%;height:62px;padding-left:20px;gap:10px;padding-right:5px;font-size:16px;color:var(--moldura);background:linear-gradient(135deg,#90660E,#D8BA67,#90660E);background-size:180% 100%;background-position:0 0;transition:transform .45s var(--e),box-shadow .45s var(--e),background-position .8s var(--e)}
+.pilula.ouro .bola{flex:none;width:50px;height:50px;color:var(--ouro-escuro)}
+.pilula.ouro .bola svg{width:24px;height:24px;stroke-width:2.2}
+.pilula.ouro .bola::before{background:var(--moldura)}
+.pilula.ouro:hover .tx{color:var(--ink)}
+.pilula.ouro:hover .bola{color:var(--ouro-escuro)}
+.texto-p .acoes{container-type:inline-size}
+/* texto do botão sempre em 1 linha: o mais longo mede 21,1x a fonte; 110px = espaço do círculo e margens */
+.pilula.ouro .tx{white-space:nowrap;font-size:min(16px,calc((100cqi - 88px) / 22.2))}
+.pilula.ouro:hover{background-position:100% 0;box-shadow:0 22px 44px -18px rgba(144,102,14,.7)}
+/* mini cupom dos produtos: só o contorno tracejado, recortes nas laterais e canhoto pra copiar */
+.cupom-chip{position:relative;display:inline-flex;align-items:stretch;height:50px;padding:0;border:1.5px dashed var(--ink);border-radius:12px;background:transparent;color:var(--ink);cursor:pointer;transform:rotate(-1.2deg);transition:transform .45s var(--e),background .4s}
+.cupom-chip::before,.cupom-chip::after{content:"";position:absolute;top:50%;width:16px;height:16px;margin-top:-8px;border-radius:50%;border:1.5px dashed var(--ink);background:var(--branco)}
+.cupom-chip::before{left:-9.5px;clip-path:inset(0 0 0 44%)}
+.cupom-chip::after{right:-9.5px;clip-path:inset(0 44% 0 0)}
+.cupom-chip:hover{transform:rotate(0deg) translateY(-2px);background:rgba(216,186,103,.12)}
+.cupom-chip .cod{display:flex;flex-direction:column;justify-content:center;gap:2px;padding:0 16px 0 20px;text-align:left}
+.cupom-chip .cod small{font:400 10px/1 'Gotham',sans-serif;color:var(--ink2)}
+.cupom-chip .cod b{font:300 19px/1 'Quincy',Georgia,serif;letter-spacing:.04em;color:var(--ink)}
+.cupom-chip .canh{display:flex;align-items:center;gap:7px;padding:0 18px 0 15px;border-left:1.5px dashed var(--ink);font:700 12px 'Gotham',sans-serif;color:var(--ink)}
+.cupom-chip .canh .ic{display:grid;place-items:center}
+
+/* ---------- barra de cima ---------- */
+.barra{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:22px var(--margem)}
+.barra .logo{filter:invert(1) brightness(2)}
+.barra .logo{height:28px;width:auto}
+
+/* ---------- topo: foto inteira, texto claro à esquerda ---------- */
+.heroi{position:relative;height:72vh;height:72svh;min-height:520px;max-height:780px;overflow:hidden;background:#0A0A0A;display:flex;align-items:center}
+.heroi picture,.heroi picture img{position:absolute;inset:0;width:100%;height:100%}
+.heroi picture img{object-fit:cover;object-position:50% 30%;transform:scale(1.07);transform-origin:70% 40%;transition:transform 1.8s var(--e)}
+/* desktop: foto maior e presa à esquerda, pra Carol ficar à direita do texto */
+/* desktop: a foto aparece inteira na altura, presa à direita; à esquerda, fundo escuro com transição */
+@media(min-width:861px){
+  .heroi{background:#0A0A0A}
+  .heroi picture img{left:auto;right:0;top:-30%;height:142%;width:auto;max-width:none;aspect-ratio:3/2;object-position:50% 50%;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16%);mask-image:linear-gradient(90deg,transparent 0,#000 16%)}
+}
+.pronto .heroi picture img{transform:none}
+.heroi::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(90deg,rgba(10,10,10,.88) 0%,rgba(10,10,10,.74) 30%,rgba(10,10,10,.46) 46%,rgba(10,10,10,.14) 60%,transparent 72%)}
+.heroi-tx{position:relative;z-index:2;max-width:min(calc(var(--margem) + 560px),47vw);padding:0 0 0 var(--margem);color:var(--moldura)}
+.heroi h1{font-size:clamp(44px,3.9vw,76px);line-height:1;letter-spacing:-.02em}
+.heroi h1 .it{background:linear-gradient(135deg,#90660E,#D8BA67,#90660E);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.06em}
+.heroi .sub{margin-top:20px;max-width:440px;font-size:clamp(17px,1.5vw,20px);line-height:1.45;color:rgba(252,252,242,.86)}
+.heroi .pilula{margin-top:32px;width:auto;min-width:300px;height:62px;padding-left:28px;gap:40px}
+.heroi .pilula.ouro .tx{font-size:15px}
+.heroi .entra{opacity:0;transform:translateY(22px);transition:opacity .9s var(--e),transform .9s var(--e)}
+.pronto .heroi .entra{opacity:1;transform:none}
+.pronto .heroi .entra:nth-child(2){transition-delay:.14s}
+.pronto .heroi .entra:nth-child(3){transition-delay:.28s}
+.pronto .heroi .entra:nth-child(4){transition-delay:.42s}
+.heroi .logo-h{display:block;height:30px;width:auto;margin-bottom:34px;filter:invert(1) brightness(2)}
+
+/* 31 faixa correndo no topo do herói */
+.faixa-topo{position:absolute;top:0;left:0;right:0;z-index:3;height:44px;display:flex;align-items:center;overflow:hidden;
+  background:rgba(10,10,10,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(216,186,103,.25)}
+.faixa-topo::before,.faixa-topo::after{content:"";position:absolute;top:0;bottom:0;width:10%;z-index:1;pointer-events:none}
+.faixa-topo::before{left:0;background:linear-gradient(90deg,#0A0A0A,transparent)}
+.faixa-topo::after{right:0;background:linear-gradient(-90deg,#0A0A0A,transparent)}
+.corre-t{display:flex;align-items:center;gap:22px;width:max-content;white-space:nowrap;animation:correT 38s linear infinite;color:var(--moldura);font:700 13px/1 'Gotham',sans-serif;letter-spacing:.04em}
+.corre-t .pt{font-size:16px;background:linear-gradient(135deg,#90660E,#D8BA67,#90660E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.corre-t .cupom-t{font-weight:700;letter-spacing:.04em;background:linear-gradient(135deg,#90660E,#D8BA67,#90660E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.corre-t svg{flex:none}
+@keyframes correT{to{transform:translateX(-50%)}}
+/* 37 cartões flutuando */
+.flut{animation:flutua 7s ease-in-out infinite}
+.flut.b{animation-duration:8.5s;animation-delay:-3s}
+@keyframes flutua{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+
+/* ---------- combinado ---------- */
+.combinado{padding:110px 34px 40px;display:grid;grid-template-columns:1fr 1.25fr;gap:60px}
+.combinado h2{font-size:clamp(38px,4.4vw,60px);line-height:1;letter-spacing:-.015em}
+.combinado h2 .it{background:linear-gradient(135deg,#90660E,#D8BA67,#90660E);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.05em}
+.combinado .texto{display:grid;gap:18px;font-size:clamp(17px,1.4vw,19px);color:var(--ink2)}
+.combinado .texto .forte{font-weight:700;color:var(--ink)}
+.frase-forte{padding:60px 34px 20px;text-align:center}
+/* 11 texto que se pinta */
+.pinta{max-width:1000px;margin:0 auto;font:300 clamp(32px,4.4vw,60px)/1.12 'Quincy',Georgia,serif;letter-spacing:-.01em}
+/* acende palavra por palavra conforme a rolagem */
+.pinta .pw{color:rgba(10,10,10,.16);transition:color .45s var(--e)}
+.pinta .pw.on{color:var(--ink)}
+.frase-forte .resto{margin-top:26px;font-size:clamp(17px,1.5vw,20px);color:var(--ink2)}
+
+/* ---------- cupom: tíquete com picote e canhoto ---------- */
+.cupom{position:relative;margin-top:110px;display:grid;justify-items:center}
+.ticket{--corte:22px;position:relative;width:100%;display:grid;grid-template-columns:68% 1fr;min-height:300px;color:var(--moldura);
+  filter:drop-shadow(0 40px 50px rgba(10,10,10,.28))}
+.ticket.rv{transform:translateY(40px) rotate(-1.6deg) scale(.985)}
+.ticket.rv.in{transform:rotate(-1.6deg)}
+.ticket.rv.in:hover{transform:rotate(0deg) translateY(-4px)}
+.ticket .corpo,.ticket .canhoto{position:relative;background:var(--ink);overflow:hidden}
+.ticket .corpo{border-radius:26px 0 0 26px;padding:44px 48px;display:flex;flex-direction:column;justify-content:center;gap:18px;
+  -webkit-mask:radial-gradient(circle var(--corte) at 100% 0,transparent 98%,#000) top/100% 51% no-repeat,radial-gradient(circle var(--corte) at 100% 100%,transparent 98%,#000) bottom/100% 51% no-repeat;
+  mask:radial-gradient(circle var(--corte) at 100% 0,transparent 98%,#000) top/100% 51% no-repeat,radial-gradient(circle var(--corte) at 100% 100%,transparent 98%,#000) bottom/100% 51% no-repeat}
+.ticket .canhoto{border-radius:0 26px 26px 0;padding:36px 28px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;transform-origin:0 100%;transition:transform .5s var(--e);
+  -webkit-mask:radial-gradient(circle var(--corte) at 0 0,transparent 98%,#000) top/100% 51% no-repeat,radial-gradient(circle var(--corte) at 0 100%,transparent 98%,#000) bottom/100% 51% no-repeat;
+  mask:radial-gradient(circle var(--corte) at 0 0,transparent 98%,#000) top/100% 51% no-repeat,radial-gradient(circle var(--corte) at 0 100%,transparent 98%,#000) bottom/100% 51% no-repeat}
+.ticket .canhoto::before{content:"";position:absolute;left:0;top:var(--corte);bottom:var(--corte);border-left:2px dashed rgba(252,252,242,.3)}
+.ticket.rasga .canhoto{transform:rotate(5deg) translate(8px,6px)}
+.ticket .corpo::after,.ticket .canhoto::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 35%,rgba(216,186,103,.16) 50%,transparent 65%);transform:translateX(-120%);animation:brilhoT 6s var(--e) infinite}
+.ticket .canhoto::after{animation-delay:.35s}
+@keyframes brilhoT{0%,55%{transform:translateX(-120%)}85%,100%{transform:translateX(120%)}}
+.ticket .rot{color:rgba(252,252,242,.6)}
+.ticket .corpo p.tx{font:300 clamp(24px,2.1vw,34px)/1.22 'Quincy',Georgia,serif;letter-spacing:-.01em;max-width:640px}
+.ticket .corpo p.tx b{font-weight:300;font-style:italic;background:linear-gradient(135deg,#90660E,#D8BA67,#90660E);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.05em}
+.ticket .barras{position:absolute;right:30px;bottom:24px;display:flex;gap:4px;opacity:.45}
+.ticket .barras i{width:2px;height:26px;background:var(--moldura)}
+.ticket .barras i:nth-child(3n){width:4px}
+.ticket .barras i:nth-child(4n){height:20px;margin-top:6px}
+.ticket .codigo-g{font:300 clamp(28px,2.4vw,40px)/1 'Quincy',Georgia,serif;letter-spacing:.03em;background:linear-gradient(135deg,#90660E,#D8BA67,#90660E);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.05em}
+.ticket .copiar{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 20px;border-radius:12px;border:0;background:linear-gradient(135deg,#90660E,#D8BA67,#90660E);background-size:180% 100%;color:var(--moldura);font:700 15px 'Gotham',sans-serif;cursor:pointer;transition:transform .4s var(--e),box-shadow .4s var(--e)}
+.ticket .copiar:hover{background-position:100% 0;transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(216,186,103,.8)}
+
+/* ---------- a listinha: índice tingido ---------- */
+.lista-sec{padding:110px 0 30px}
+.lista-cab{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;padding:0 20px 26px}
+.lista-cab h2{font-size:clamp(40px,5vw,72px);line-height:1;letter-spacing:-.015em}
+.lista-cab h2 .it{background:linear-gradient(135deg,#90660E,#D8BA67,#90660E);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.05em}
+
+/* ---------- produtos ---------- */
+.produtos{display:grid;gap:14px}
+.produto{display:grid;grid-template-columns:.85fr 1.25fr;gap:14px;scroll-margin-top:16px}
+.produto:nth-child(even) .painel{order:2}
+.produto:nth-child(even){grid-template-columns:1.25fr .85fr}
+.painel{position:relative;min-height:460px;border-radius:28px;background:var(--t);padding:28px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.painel .n{position:absolute;right:-10px;top:-24px;font:300 italic clamp(180px,22vw,300px)/1 'Quincy',Georgia,serif;color:rgba(10,10,10,.08)}
+.painel h3{position:relative;font:300 clamp(36px,4vw,56px)/1 'Quincy',Georgia,serif;letter-spacing:-.015em;max-width:420px}
+.painel .flutuante{position:relative;align-self:flex-start;display:flex;align-items:center;gap:12px;padding:10px 12px 10px 16px;border-radius:999px;border:0;background:rgba(255,255,254,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 20px 40px -24px rgba(10,10,10,.5);font:400 14px 'Gotham',sans-serif;color:var(--ink);cursor:pointer}
+.painel.foto{padding:0;display:block;min-height:420px;background:var(--t)}
+.painel.foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--e)}
+.painel.foto:hover img{transform:scale(1.04)}
+.painel.foto img.inteira{object-fit:contain;padding:28px}
+.texto-p{container-type:inline-size}
+/* todos os títulos em 1 linha: o mais longo (Secador 5 em 1 da Shopee) mede 10,14x a fonte */
+.texto-p .nome-t{white-space:nowrap;font:300 min(44px,9.4cqi)/1.02 'Quincy',Georgia,serif;letter-spacing:-.015em;margin-bottom:4px}
+.texto-p{border-radius:28px;background:var(--branco);border:1px solid var(--linha);padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:16px}
+.texto-p p{font-size:17px;color:var(--ink2)}
+.texto-p .cupom-linha{margin-top:-2px}
+.texto-p .acoes{margin-top:auto;padding-top:8px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+
+/* ---------- fim ---------- */
+.divisor{height:1px;background:rgba(10,10,10,.16);margin-top:100px}
+.fim{margin-top:100px;display:grid;grid-template-columns:.9fr 1.1fr;gap:14px}
+.fim .foto{position:relative;min-height:560px;border-radius:28px;overflow:hidden}
+.fim .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.fim .foto .bolha{position:absolute;right:18px;top:18px;width:56px;height:56px;border-radius:999px;background:rgba(255,255,254,.9);display:grid;place-items:center;box-shadow:0 20px 40px -20px rgba(10,10,10,.5)}
+.fim .lado{border-radius:28px;background:var(--ink);color:var(--moldura);padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;justify-content:center}
+.fim .lado .grande{font:300 clamp(32px,3.6vw,52px)/1.08 'Quincy',Georgia,serif;letter-spacing:-.01em}
+.fim .lado .grande .it{background:linear-gradient(135deg,#90660E,#D8BA67,#90660E);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.05em}
+.fim .lado p.pergunta{margin-top:24px;font-size:18px;color:rgba(252,252,242,.75);max-width:440px}
+.fim .lado .pilula{margin-top:30px;align-self:stretch}
+.fim .lado .pilula.ouro .tx{font-size:15px}
+
+footer{padding:56px 24px 34px;text-align:center}
+footer .aviso{max-width:780px;margin:0 auto;font:400 14px/1.6 'Gotham',sans-serif;color:var(--ink2)}
+footer .copy{margin-top:22px;font-size:13px;color:var(--ink3)}
+
+.toque{position:fixed;left:50%;bottom:22px;z-index:50;transform:translate(-50%,16px);opacity:0;display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:var(--ink);color:var(--moldura);font-size:14px;font-weight:500;box-shadow:0 20px 40px -16px rgba(10,10,10,.6);transition:opacity .35s var(--e),transform .35s var(--e);pointer-events:none;white-space:nowrap}
+.toque.vis{opacity:1;transform:translate(-50%,0)}
+
+/* celular (depois das regras base) */
+@media(max-width:860px){
+  .moldura>section,.moldura>footer{width:calc(100% - 36px)}
+  .barra{padding:16px}
+  .barra .logo{height:24px}
+  .heroi{height:78svh;min-height:500px;max-height:none;align-items:flex-end}
+  .heroi picture img{object-position:36% 0;top:-16%;height:116%}
+  .heroi::before{background:linear-gradient(180deg,rgba(10,10,10,.35) 0%,transparent 18%,transparent 30%,rgba(10,10,10,.5) 46%,rgba(10,10,10,.86) 64%,rgba(10,10,10,.95) 100%)}
+  .heroi-tx{padding:0 18px 34px;max-width:none;width:100%}
+  .heroi h1{font-size:clamp(40px,11.4vw,56px)}
+  .heroi .sub{margin-top:14px;font-size:16px}
+  .heroi .pilula{margin-top:22px;width:100%;min-width:0}
+  .heroi .logo-h{height:24px;margin-bottom:22px}
+  .combinado{grid-template-columns:1fr;gap:22px;padding:42px 0 20px}
+  .frase-forte{padding:40px 0 10px}
+  .cupom{margin-top:84px}
+  .ticket{--corte:16px;grid-template-columns:1fr;width:86%;max-width:340px}
+  .ticket.rv{transform:translateY(40px) rotate(-1deg)}
+  .ticket.rv.in{transform:rotate(-1deg)}
+  .ticket .corpo{border-radius:20px 20px 0 0;padding:24px 20px 26px;
+    -webkit-mask:radial-gradient(circle var(--corte) at 0 100%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle var(--corte) at 100% 100%,transparent 98%,#000) right/51% 100% no-repeat;
+    mask:radial-gradient(circle var(--corte) at 0 100%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle var(--corte) at 100% 100%,transparent 98%,#000) right/51% 100% no-repeat}
+  .ticket .canhoto{border-radius:0 0 20px 20px;padding:22px 20px 24px;transform-origin:100% 0;
+    -webkit-mask:radial-gradient(circle var(--corte) at 0 0,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle var(--corte) at 100% 0,transparent 98%,#000) right/51% 100% no-repeat;
+    mask:radial-gradient(circle var(--corte) at 0 0,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle var(--corte) at 100% 0,transparent 98%,#000) right/51% 100% no-repeat}
+  .ticket .canhoto::before{left:var(--corte);right:var(--corte);top:0;bottom:auto;border-left:0;border-top:2px dashed rgba(252,252,242,.3)}
+  .ticket.rasga .canhoto{transform:rotate(-3deg) translate(-4px,10px)}
+  .ticket .corpo p.tx{font-size:21px;text-align:center;margin:0 auto}
+  .ticket .barras{display:none}
+  .ticket .copiar{height:50px;padding:0 20px;font-size:14px}
+    .lista-sec{padding:70px 0 20px}
+  .lista-cab{padding:0 0 18px}
+  .produto{grid-template-columns:1fr;gap:8px}
+  .produto:nth-child(even) .painel{order:0}
+  .produto:nth-child(even){grid-template-columns:1fr}
+  .painel{min-height:230px;border-radius:22px;padding:22px}
+  .painel .n{font-size:190px;top:-20px}
+  .painel h3{font-size:36px}
+  .texto-p{border-radius:22px;padding:22px 16px}
+  .painel.foto{min-height:0;aspect-ratio:4/3.4}
+  .texto-p p{font-size:15.5px}
+  .texto-p .acoes .pilula{width:100%}
+  .pilula.ouro{height:64px;padding-left:16px;gap:8px;padding-right:7px}
+  .pilula.ouro .bola{width:48px;height:48px}
+  .pilula.ouro .tx{letter-spacing:-.015em;font-size:min(15px,calc((100cqi - 78px) / 21.5))}
+  .divisor{margin-top:36px}
+  .fim{margin-top:36px;grid-template-columns:1fr;gap:8px}
+  .fim .foto{min-height:0;aspect-ratio:4/4.4;border-radius:22px}
+  .fim .lado{border-radius:22px}
+  .fim .lado .pilula{width:100%}
+  .pilula{height:62px;font-size:14.5px;padding-left:20px}
+  footer{padding:40px 0 26px}
+}
+
+@media(max-width:380px){.heroi .sub{font-size:14.5px}}
+
+@media(max-width:860px){.faixa-topo{height:40px}.corre-t{font-size:13px;gap:22px}}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .rv,.heroi .entra{opacity:1;transform:none;filter:none}
+  .heroi picture img{transform:none}
+}
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCDVNZMG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="moldura">
+
+  <!-- TOPO -->
+  <header class="heroi">
+    <div class="faixa-topo" aria-hidden="true"><div class="corre-t" id="correTopo"></div></div>
+    <picture>
+      <source media="(max-width:860px)" srcset="/assets/bf/heroi-op6-m.webp" />
+      <img src="/assets/bf/heroi-op6.webp" alt="Carol Rache sorrindo, sentada na sala" fetchpriority="high" />
+    </picture>
+    <div class="heroi-tx">
+      <img class="logo-h entra" src="/assets/logo%20CR.svg" alt="Carol Rache" />
+      <h1 class="serif entra">A listinha de<br class="so-d"> <span class="it">Black Friday</span><br class="so-d"> da Carol</h1>
+      <p class="sub entra">Só o que eu realmente uso, amo e indico.<br class="so-m"> Sem caça a ofertas inúteis.</p>
+      <a class="pilula ouro entra" href="#lista"><span class="tx">VER MINHA LISTA</span><span class="bola"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></a>
+    </div>
+  </header>
+
+  <!-- INTRODUÇÃO -->
+  <section class="combinado">
+    <h2 class="serif rv">Vamos fazer um <span class="it">combinado?</span></h2>
+    <div class="texto">
+      <p class="rv forte">Todo ano vocês <span class="nw">me pedem</span> <span class="nw">a famosa</span> listinha <span class="nw">de Black Friday.</span> Então aqui <span class="nw">está ela!</span></p>
+      <p class="rv">Mas antes, <span class="nw">um combinado</span> entre <span class="nw">a gente:</span> <span class="nw">o seu</span> cérebro adora <span class="nw">a sensação</span> <span class="nw">de estar</span> fazendo <span class="nw">um bom negócio.</span></p>
+      <p class="rv">Comprar <span class="nw">já libera</span> dopamina, <span class="nw">e comprar</span> com desconto <span class="nw">dá a sensação</span> <span class="nw">de estar</span> <span class="nw">se dando</span> bem. <span class="nw">Ou seja,</span> <span class="nw">o prazer</span> <span class="nw">é em dobro.</span> <span class="nw">E é aí que</span> mora <span class="nw">a armadilha.</span></p>
+    </div>
+  </section>
+  <section class="frase-forte">
+    <p class="pinta" data-pinta>Então compre o que você realmente usa, ou aquilo que você já queria testar e quer aproveitar que está mais barato.</p>
+    <p class="resto rv">O resto pode ficar na loja, tá?</p>
+  </section>
+
+  <!-- CUPOM -->
+  <section class="cupom">
+    <div class="ticket rv" id="ticket">
+      <div class="corpo">
+        <p class="tx"><b>Use o meu cupom CAROLRACHE</b><br class="so-m"> nas marcas parceiras. Ele te dá um desconto extra, além dos descontos <span class="nw">da Black Friday.</span></p>
+        <span class="barras" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+      </div>
+      <div class="canhoto">
+        <span class="rot">Cupom</span>
+        <p class="codigo-g">CAROLRACHE</p>
+        <button class="copiar" type="button" data-copiar data-rasga><span class="ic-c"></span>Copiar cupom</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section class="lista-sec" id="lista">
+    <div class="lista-cab">
+      <h2 class="serif rv">A <span class="it">listinha</span></h2>
+    </div>
+    <div class="produtos" id="produtos"></div>
+  </section>
+
+  <section class="divisor" aria-hidden="true"></section>
+
+  <!-- ENCERRAMENTO -->
+  <section class="fim">
+    <div class="foto rv">
+      <img src="/assets/bf/carol-celular.webp" srcset="/assets/bf/carol-celular-800.webp 800w, /assets/bf/carol-celular.webp 1100w" sizes="(max-width:860px) 92vw, 40vw" alt="Carol Rache segurando o celular" loading="lazy" decoding="async" />
+      <span class="bolha"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg></span>
+    </div>
+    <div class="lado rv">
+      <p class="grande">São 5 produtos que <span class="nw">eu já testei,</span> uso <span class="nw">no dia a dia</span> <span class="nw">e recomendo</span> <span class="nw">de <span class="it">olhos fechados.</span></span></p>
+      <p class="pergunta">E você, tem alguma dica UAU <span class="nw">para me dar?</span> <span class="nw">Me manda</span> <span class="nw">lá no Instagram!</span></p>
+      <a class="pilula ouro" id="dicaUau" href="#" target="_blank" rel="noopener"><span class="tx">MANDAR MINHA DICA UAU</span><span class="bola"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span></a>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p class="aviso">Alguns links são de parceria e podem gerar comissão para mim, sem nenhum custo a mais para você.<br class="so-d"> Preços, cupons e brindes são definidos por cada loja e podem mudar sem aviso.</p>
+    <p class="copy">Copyright © 2026 Carol Rache. Todos os Direitos Reservados</p>
+  </footer>
+</div>
+
+<div class="toque" id="toque" role="status" aria-live="polite"></div>
+
+<script>
+// ---------- conteúdo (copy fiel ao documento) ----------
+const CUPOM = 'CAROLRACHE';
+const INSTAGRAM = 'https://www.instagram.com/carolrache.uau';
+// Links tirados do e-mail "A B Friday é uma armadilha" (ActiveCampaign). tinta = cor do bloco sem foto.
+const PRODUTOS = [
+  {
+    nome: 'SuperCoffee', tinta: '#F1E7CF', imagem: '/assets/bf/produto-supercoffee.webp',
+    link: 'https://caffeinearmy.pilealabs.link/carolrache/ofKEhd',
+    paragrafos: [
+      'Meu amado! É a melhor época do ano para fazer um mini estoque. Se você já toma, não faz sentido pagar mais caro o ano todo. Se ainda não toma, é a hora de experimentar.',
+      'Sou suspeita, porque devo boa parte da minha energia e do meu bom humor matinal a ele. Meu sabor preferido é Língua de Gato (e misturado com Lajotinha fica melhor ainda).',
+    ],
+    cupom: true,
+    botao: 'QUERO SUPERCOFFEE COM DESCONTO!',
+  },
+  {
+    nome: 'Travesseiros IWS', tinta: '#EAE3D3', imagem: '/assets/bf/produto-iws.webp', semVariante: true, imagemCelular: '/assets/bf/produto-iws-m.webp',
+    link: 'https://www.iwannasleep.com.br/go/kuzhqz',
+    paragrafos: [
+      'Quem dorme mal vive mal, e você merece deitar e sentir a sua cama te "abraçando". O travesseiro Snow é um investimento maravilhoso, porque dura uma vida inteira.',
+      'Também amo o pillow top da marca e testei recentemente o travesseiro que impede de virar e favorece o skincare. Tudo que já testei deles eu gostei.',
+    ],
+    cupom: true,
+    botao: 'QUERO TRAVESSEIRO COM DESCONTO!',
+  },
+  {
+    nome: 'Linha Anti-Frizz Hidratei', tinta: '#F4EBD6', imagem: '/assets/bf/produto-hidratei.webp',
+    link: 'https://hidratei.com.br/collections/linha-antifrizz?utm_source=influencer&utm_medium=instagram&utm_campaign=carolrache_29_11_2026_KITANTIFRIZZ&utm_id=12345&utm_content=carolrache',
+    paragrafos: [
+      'Disparado a minha linha preferida da marca. Já testei produtos gringos bem mais caros que não entregam tanto.',
+      'Ela cria uma "película" no fio que protege da umidade e deixa as cutículas fechadinhas, então o brilho fica surreal. É o tipo de produto que tem que ter.',
+    ],
+    cupom: true,
+    botao: 'QUERO HIDRATEI COM DESCONTO!',
+  },
+  {
+    nome: 'Secador Dyson', tinta: '#ECE6DA', imagem: '/assets/bf/produto-dyson.webp',
+    link: 'https://www.dysonoficial.com.br/products/modelador-multifuncao-de-cabelo-unica',
+    paragrafos: [
+      'Descobri por acaso que tem produtos com MUITO desconto no site. Não sou parceira deles (alô, Dyson, me nota! rs), então aqui não tem cupom.',
+      'Mas é a "Brastemp" dos secadores e costuma ser tão caro que desanima. Por isso, vale aproveitar agora.',
+    ],
+    cupom: false,
+    botao: 'QUERO SECADOR COM DESCONTO!',
+  },
+  {
+    nome: 'Secador 5 em 1 da Shopee', tinta: '#FCF4EC', inteira: true, imagem: '/assets/bf/produto-shopee.webp', // gerada com IA (Magnific) a partir da foto da Shopee, sem os textos
+    link: 'https://s.shopee.com.br/3qOaX9nN7I',
+    paragrafos: [
+      'Se nem com desconto você se animou com o Dyson, calma, tenho uma dica boa. Comprei esse na Shopee e simplesmente amei.',
+      'É secador, mas vem com várias ponteiras para modelar o cabelo, inclusive uma de babyliss que eu amo. Uso muito, e o preço é bem bom.',
+    ],
+    cupom: false,
+    botao: 'QUERO SECADOR BARATINHO!',
+  },
+];
+
+// ---------- base ----------
+const calmo = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const registrar = (event, dados = {}) => { (window.dataLayer = window.dataLayer || []).push({ event, ...dados }); };
+const esc = t => t.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const dois = i => String(i + 1).padStart(2, '0');
+const v800 = src => src.replace(/\.webp$/, '-800.webp'); // versão de 800px (q95) pro celular
+const svgSeta = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>';
+const svgDiag = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>';
+const svgCopiar = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2.5"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>';
+const svgOk = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+
+$('#dicaUau').href = INSTAGRAM;
+$('#dicaUau').addEventListener('click', () => registrar('clique_dica_uau_bf'));
+
+// ---------- índice e produtos ----------
+$('#produtos').innerHTML = PRODUTOS.map((p, i) => `
+  <article class="produto" id="produto-${i + 1}">
+    ${p.imagem ? `
+    <a class="painel foto rv" href="${p.link}" target="_blank" rel="noopener" data-produto="${esc(p.nome)}" style="--t:${p.tinta}">
+      <picture>${p.imagemCelular ? `<source media="(max-width:860px)" srcset="${v800(p.imagemCelular)} 800w, ${p.imagemCelular} 1200w" sizes="92vw" />` : ''}<img src="${p.imagem}"${p.semVariante ? '' : ` srcset="${v800(p.imagem)} 800w, ${p.imagem} 1100w"`} sizes="(max-width:860px) 92vw, 36vw" alt="${esc(p.nome)}" loading="lazy" decoding="async"${p.inteira ? ' class="inteira"' : ''} /></picture>
+    </a>` : `
+    <div class="painel rv" style="--t:${p.tinta}">
+      <span class="n" aria-hidden="true">${dois(i)}</span>
+      <span class="rot" style="position:relative">( ${dois(i)} )</span>
+      <h3>${esc(p.nome)}</h3>
+      <span></span>
+    </div>`}
+    <div class="texto-p rv">
+      ${p.imagem ? `<h3 class="nome-t">${p.titulo || esc(p.nome)}</h3>` : ''}
+      ${p.paragrafos.map(t => `<p>${esc(t)}</p>`).join('')}
+      ${p.cupom ? `<div class="cupom-linha"><button class="cupom-chip" type="button" data-copiar><span class="cod"><small>Cupom</small><b>${CUPOM}</b></span><span class="canh"><span class="ic"></span>COPIAR</span></button></div>` : ''}
+      <div class="acoes">
+        <a class="pilula ouro" href="${p.link}" target="_blank" rel="noopener" data-produto="${esc(p.nome)}"><span class="tx">${esc(p.botao)}</span><span class="bola">${svgSeta}</span></a>
+      </div>
+    </div>
+  </article>`).join('');
+
+$$('[data-produto]').forEach(a => a.addEventListener('click', () => registrar('clique_produto_bf', { produto: a.dataset.produto })));
+
+// ---------- copiar o cupom ----------
+const toque = $('#toque'); let toqueTimer;
+const avisa = html => { toque.innerHTML = html; toque.classList.add('vis'); clearTimeout(toqueTimer); toqueTimer = setTimeout(() => toque.classList.remove('vis'), 2200); };
+$$('.cupom-chip .ic, .copiar .ic-c').forEach(ic => ic.innerHTML = svgCopiar);
+// canhoto do tíquete dá um rasgadinho ao copiar
+$$('[data-rasga]').forEach(bt => bt.addEventListener('click', () => { const t = $('#ticket'); t.classList.add('rasga'); setTimeout(() => t.classList.remove('rasga'), 700); }));
+$$('[data-copiar]').forEach(bt => {
+  bt.setAttribute('aria-label', `Copiar o cupom ${CUPOM}`);
+  bt.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(CUPOM);
+      avisa(`${svgOk} Cupom ${CUPOM} copiado`);
+      const ic = bt.querySelector('.ic');
+      if (ic) { ic.innerHTML = svgOk; setTimeout(() => ic.innerHTML = svgCopiar, 2200); }
+      registrar('copiou_cupom_bf', { cupom: CUPOM });
+    } catch { /* sem permissão: o código continua visível pra copiar na mão */ }
+  });
+});
+
+// ---------- 1 entrada desfocada ----------
+const filaRv = []; let esperaRv = null;
+const ioRv = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting) { filaRv.push(e.target); ioRv.unobserve(e.target); } });
+  if (!esperaRv) esperaRv = setTimeout(() => {
+    filaRv.sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top || a.getBoundingClientRect().left - b.getBoundingClientRect().left)
+      .forEach((el, i) => { el.style.setProperty('--d', Math.min(i, 6) * .09 + 's'); el.classList.add('in'); });
+    filaRv.length = 0; esperaRv = null;
+  }, 30);
+}, { rootMargin: '0px 0px -8% 0px' });
+$$('.rv').forEach(el => calmo ? el.classList.add('in') : ioRv.observe(el));
+
+// ---------- no celular, o botão do topo vai até onde termina a linha mais longa do título ----------
+const ajustaBotaoTopo = () => {
+  const h = $('.heroi h1'), bt = $('.heroi .pilula');
+  if (innerWidth > 860) { bt.style.width = ''; return; }
+  const rg = document.createRange(); rg.selectNodeContents(h);
+  const rs = [...rg.getClientRects()].filter(r => r.width > 0);
+  bt.style.width = Math.round(Math.max(...rs.map(r => r.right)) - Math.min(...rs.map(r => r.left))) + 'px';
+};
+addEventListener('resize', ajustaBotaoTopo);
+(document.fonts ? document.fonts.ready : Promise.resolve()).then(ajustaBotaoTopo);
+ajustaBotaoTopo();
+
+// ---------- faixa do topo ----------
+(() => {
+  const ponto = '<span class="pt" aria-hidden="true">•</span>';
+  const itens = [`CUPOM <span class="cupom-t">${CUPOM}</span>`, 'LISTINHA DE BLACK FRIDAY'];
+  $('#correTopo').innerHTML = itens.map(t => `<span>${t}</span>${ponto}`).join('').repeat(8);
+})();
+
+// ---------- 6 entrada do topo ----------
+Promise.race([document.fonts ? document.fonts.ready : Promise.resolve(), new Promise(r => setTimeout(r, 1200))])
+  .then(() => requestAnimationFrame(() => document.body.classList.add('pronto')));
+
+// ---------- laço único de rolagem: 11 texto que se pinta ----------
+const pinta = $$('[data-pinta]').map(el => {
+  const palavras = el.textContent.trim().split(/\s+/);
+  el.setAttribute('aria-label', el.textContent.trim());
+  el.innerHTML = palavras.map(w => `<span class="pw" aria-hidden="true">${esc(w)}</span>`).join(' ');
+  return { el, pws: [...el.querySelectorAll('.pw')] };
+});
+const pintar = () => pinta.forEach(({ el, pws }) => {
+  const r = el.getBoundingClientRect(), ini = innerHeight * .85, fim = innerHeight * .35;
+  const p = calmo ? 1 : Math.max(0, Math.min(1, (ini - r.top) / (ini - fim)));
+  const acesas = Math.round(p * pws.length);
+  pws.forEach((w, i) => w.classList.toggle('on', i < acesas));
+});
+let pedido = false;
+const tudo = () => { pedido = false; pintar(); };
+addEventListener('scroll', () => { if (!pedido) { pedido = true; requestAnimationFrame(tudo); } }, { passive: true });
+addEventListener('resize', tudo);
+tudo();
+</script>
+</body>
+</html>
